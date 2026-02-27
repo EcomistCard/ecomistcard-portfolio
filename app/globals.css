@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    min-height: 100vh;
+  }
+
+  /* Light mode: light background so all content is clearly visible */
+  html.light body {
+    @apply text-gray-900 bg-gray-50;
+  }
+
+  /* Dark mode when .dark is on html */
+  html.dark body {
+    @apply bg-background text-gray-100;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-md;
+  }
+
+  html.dark .glass {
+    @apply bg-white/5 border-white/10;
+  }
+
+  /* Light mode: clean frosted panels with strong contrast */
+  html.light .glass {
+    @apply border-gray-200/80 shadow-lg bg-white/95;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-blue-500 bg-clip-text text-transparent;
+  }
+
+  /* Nav logo: keep transparency — no blend, no background */
+  .nav-logo-img {
+    background: transparent !important;
+  }
+}
