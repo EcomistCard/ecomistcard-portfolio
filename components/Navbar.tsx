@@ -33,7 +33,7 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  const isLightNav = theme === "light" || (scrolled && theme === "light");
+  const isLightNav = theme === "light";
 
   if (!mounted) {
     return (
