@@ -31,22 +31,42 @@ export default function ServicesPageContent() {
   return (
     <main className="min-h-screen pt-28 pb-24 bg-slate-50/80 dark:bg-transparent relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* Full-width hero banner for Services */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-16 text-center"
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="relative mb-16 overflow-hidden rounded-3xl bg-slate-950 min-h-[260px] sm:min-h-[320px] lg:min-h-[380px]"
         >
-          <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-4">
-            What I offer
-          </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-5 text-gray-900 dark:text-white tracking-tight">
-            Services
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Outcome-focused technical strategy and execution for high-value clients and consulting engagements.
-          </p>
-        </motion.div>
+          {/* Background image + gradient overlay */}
+          <div className="absolute inset-0">
+            <Image
+              src="/hero-cardly-premium.png"
+              alt=""
+              fill
+              priority
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/75 to-slate-950/35" />
+          </div>
+
+          {/* Text content over the banner */}
+          <div className="relative z-10 h-full flex items-center">
+            <div className="px-6 sm:px-8 lg:px-10 py-10 sm:py-12 lg:py-16 max-w-xl">
+              <p className="text-xs sm:text-sm font-semibold text-accent uppercase tracking-[0.25em] mb-3">
+                What I offer
+              </p>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+                Services
+              </h1>
+              <p className="text-sm sm:text-base text-slate-200/90 leading-relaxed">
+                Outcome-focused technical strategy and execution for high-value clients and consulting
+                engagements. Every engagement is designed to ship fast, feel premium, and convert.
+              </p>
+            </div>
+          </div>
+        </motion.section>
 
         <motion.div
           ref={ref}

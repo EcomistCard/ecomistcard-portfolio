@@ -54,11 +54,11 @@ export default function Navbar() {
 
   const navBg = isLightNav
     ? scrolled
-      ? "bg-white/90 border-gray-200/60 shadow-sm"
-      : "bg-white/80 border-gray-200/60 shadow-sm"
+      ? "bg-white/95 border-gray-200/70 shadow-[0_18px_45px_rgba(15,23,42,0.18)]"
+      : "bg-white/90 border-gray-200/60 shadow-[0_18px_45px_rgba(15,23,42,0.16)]"
     : scrolled
-      ? "bg-black/50 border-white/10"
-      : "bg-black/40 border-white/10";
+      ? "bg-slate-900/90 border-white/10 shadow-[0_18px_45px_rgba(15,23,42,0.65)]"
+      : "bg-slate-950/70 border-white/10";
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 py-3 border-b backdrop-blur-xl transition-all duration-300 ${navBg}`}>
@@ -66,9 +66,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className={`relative flex items-center gap-2 h-8 md:h-10 font-semibold text-lg md:text-xl transition-opacity hover:opacity-90 ${isLightNav ? "text-gray-900" : "text-white"}`}
+            className={`relative flex items-center gap-2 h-8 md:h-10 font-semibold text-[1.15rem] md:text-[1.35rem] tracking-tight transition-opacity hover:opacity-90 ${isLightNav ? "text-gray-900" : "text-white"}`}
           >
-            <span className="relative h-7 w-7 md:h-8 md:w-8 shrink-0">
+            <span className="relative h-7 w-7 md:h-9 md:w-9 shrink-0 rounded-full overflow-hidden ring-2 ring-white/40 shadow-lg">
               <Image src={NAV_LOGO_SRC} alt="" fill className="object-contain" sizes="32px" priority />
             </span>
             Cardly Martins

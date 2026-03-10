@@ -82,7 +82,7 @@ export const survivalPrepCaseStudy: CaseStudyWithSlug = {
   ],
   keyInsight:
     "In multi-product survival e-commerce, structure is revenue. By engineering clarity into complexity, the store evolved from a standard online shop into a performance-focused digital system built for long-term scalability.",
-  featuredImage: "/asset/survival-featured.png",
+  featuredImage: "/Featured%20Projects/survival-featured.png",
 };
 
 export const smkfusionCaseStudy: CaseStudyWithSlug = {
@@ -161,7 +161,7 @@ export const smkfusionCaseStudy: CaseStudyWithSlug = {
   ],
   keyInsight:
     "Strong backend systems are the backbone of multi-niche e-commerce. By automating workflows and engineering reliable backend architecture, SMKFusion now operates efficiently at scale, allowing the business to focus on growth rather than maintenance. Technical strategy + backend engineering = scalable e-commerce authority.",
-  featuredImage: "/asset/smk-featured.png",
+  featuredImage: "/Featured%20Projects/smk-featured.png",
 };
 
 export const luxuryPetStoreCaseStudy: CaseStudyWithSlug = {
@@ -238,7 +238,7 @@ export const luxuryPetStoreCaseStudy: CaseStudyWithSlug = {
   ],
   keyInsight:
     "Performance optimization directly drives trust and conversion. By focusing on Core Web Vitals and mobile-first UX, Your Luxury Pet Store transformed into a high-speed, professional e-commerce experience, positioning the brand as trustworthy, premium, and ready for growth. This demonstrates the critical intersection of technical excellence + business impact.",
-  featuredImage: "/asset/luxury-pet-featured.png",
+  featuredImage: "/Featured%20Projects/luxury-pet-featured.png",
 };
 
 export const caseStudiesBySlug: Record<string, CaseStudyWithSlug> = {

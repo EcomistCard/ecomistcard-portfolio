@@ -39,9 +39,9 @@ export const site = {
   ],
   /** Full testimonials for dedicated section; optional image path for card avatar */
   testimonials: [
-    { name: "Ashley Latasha", role: "Founder Of the Company Survival Prep", quote: "Cardly delivered beyond expectations. His ability to understand our vision and translate it into a functional, beautiful product was remarkable.", image: "/asset/testimonial-1.png" },
-    { name: "Dorothy", role: "SMKFusion Company", quote: "Incredible professionalism and technical skills. Our platform now runs flawlessly thanks to his expertise.", image: "/asset/testimonial-2.png" },
-    { name: "Michelle Morgan", role: "Eden Jewelry", quote: "Working with Cardly was seamless from start to finish. His strategic approach helped us achieve our goals faster.", image: "/asset/testimonial-3.png" },
+    { name: "Ashley Latasha", role: "Founder Of the Company Survival Prep", quote: "Cardly delivered beyond expectations. His ability to understand our vision and translate it into a functional, beautiful product was remarkable.", image: "/Client%20Testimonials/testimonial-1.png" },
+    { name: "Dorothy", role: "SMKFusion Company", quote: "Incredible professionalism and technical skills. Our platform now runs flawlessly thanks to his expertise.", image: "/Client%20Testimonials/testimonial-2.png" },
+    { name: "Michelle Morgan", role: "Eden Jewelry", quote: "Working with Cardly was seamless from start to finish. His strategic approach helped us achieve our goals faster.", image: "/Client%20Testimonials/testimonial-3.png" },
   ],
   nav: [
     { label: "Home", href: "/" },

@@ -3,7 +3,7 @@ export interface Service {
   title: string;
   shortDescription: string;
   longDescription: string;
-  /** Optional image path for My Skills card (e.g. /asset/digital-product-engineering.png) */
+  /** Optional image path for My Skills card (e.g. /My%20Skills/digital-product-engineering.png) */
   image?: string;
   outcomes?: string[];
   deliverables?: string[];

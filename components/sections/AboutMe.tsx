@@ -33,10 +33,10 @@ export default function AboutMe() {
   const [avatarError, setAvatarError] = useState(false);
 
   const about = site.aboutMe ?? {
-    avatar: "/asset/avatar.jpg",
+    avatar: "/Avatar/avatar.png",
     bio: [site.description],
   };
-  const avatarSrc = (about as { avatarAboutSection?: string }).avatarAboutSection ?? about.avatar ?? "/asset/avatar.jpg";
+  const avatarSrc = (about as { avatarAboutSection?: string }).avatarAboutSection ?? about.avatar ?? "/Avatar/avatar.png";
   const bioLines = Array.isArray(about.bio) && about.bio.length > 0 ? about.bio : [site.description];
   const vision = "vision" in about ? (about as { vision?: string }).vision : undefined;
   const values = "values" in about ? (about as { values?: string[] }).values : undefined;
