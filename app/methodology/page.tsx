@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import PageHero from "@/components/PageHero";
 import MethodologyContent from "@/components/sections/MethodologyContent";
 
 export const metadata: Metadata = {
@@ -10,8 +11,14 @@ export const metadata: Metadata = {
 
 export default function MethodologyPage() {
   return (
-    <main className="min-h-screen pt-40 pb-24 bg-slate-50 dark:bg-transparent">
-      <MethodologyContent />
-    </main>
+    <>
+      <PageHero
+        title="Methodology"
+        description="A structured, repeatable process for going from discovery to launch. See how engagements move from strategy to architecture, implementation, and ongoing support."
+      />
+      <main className="min-h-screen bg-slate-50 dark:bg-transparent pb-24">
+        <MethodologyContent />
+      </main>
+    </>
   );
 }

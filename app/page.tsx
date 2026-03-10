@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
+import TrustBar from "@/components/sections/TrustBar";
 import AboutMe from "@/components/sections/AboutMe";
+import WhyWorkWithMe from "@/components/sections/WhyWorkWithMe";
 import ServicesPreview from "@/components/sections/ServicesPreview";
 import SelectedWork from "@/components/sections/SelectedWork";
 import ExplorePortfolio from "@/components/sections/ExplorePortfolio";
@@ -20,7 +22,9 @@ export default function Home() {
   return (
     <main className="min-h-screen relative">
       <Hero />
+      <TrustBar />
       <AboutMe />
+      <WhyWorkWithMe />
       <ServicesPreview />
       <SelectedWork />
       <ExplorePortfolio />

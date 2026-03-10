@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import PageHero from "@/components/PageHero";
 import AboutContent from "@/components/sections/AboutContent";
 
 export const metadata: Metadata = {
@@ -10,8 +11,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pt-40 pb-24 bg-slate-50 dark:bg-transparent">
-      <AboutContent />
-    </main>
+    <>
+      <PageHero
+        title="About"
+        description={`${site.name} — ${site.tagline}. Learn how I think about systems, partnerships, and building long-term technical foundations.`}
+      />
+      <main className="min-h-screen bg-slate-50 dark:bg-transparent pb-24">
+        <AboutContent />
+      </main>
+    </>
   );
 }

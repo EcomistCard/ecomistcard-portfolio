@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-accent: #3b82f6;
+    --color-accent-hover: #2563eb;
+    --color-background: #0f172a;
+    --color-background-light: #ffffff;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -12,14 +19,17 @@
     min-height: 100vh;
   }
 
-  /* Light mode: light background so all content is clearly visible */
   html.light body {
     @apply text-gray-900 bg-gray-50;
   }
 
-  /* Dark mode when .dark is on html */
   html.dark body {
     @apply bg-background text-gray-100;
+  }
+
+  /* Heading typography: use heading font for h1–h3 */
+  h1, h2, h3 {
+    @apply font-heading;
   }
 }
 

@@ -173,25 +173,15 @@ export default function Hero() {
               variants={item}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.08] mb-6"
             >
-              {site.tagline.includes("&") ? (
-                <>
-                  <span className="block">
-                    {site.tagline.split("&")[0].trim()}
-                  </span>
-                  <span className="text-accent">
-                    & {site.tagline.split("&")[1]?.trim()}
-                  </span>
-                </>
-              ) : (
-                site.tagline
-              )}
+              I Build Fast, Scalable Web Systems for Startups &amp; E-Commerce Brands
             </motion.h1>
 
             <motion.p
               variants={item}
               className="text-lg sm:text-xl text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-10"
             >
-              {site.description}
+              From Shopify optimization to full-stack platforms — I help growth-focused businesses
+              ship faster, reduce technical debt, and scale with confidence.
             </motion.p>
 
             <motion.div
@@ -212,6 +202,18 @@ export default function Hero() {
                 <Calendar className="w-4 h-4" />
                 Book a Strategy Call
               </Link>
+            </motion.div>
+            <motion.div
+              variants={item}
+              className="mt-6 flex flex-col items-center lg:items-start"
+            >
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-300/90">
+                <span>20+ Projects Delivered</span>
+                <span className="hidden sm:inline text-slate-500">|</span>
+                <span>3+ Years Experience</span>
+                <span className="hidden sm:inline text-slate-500">|</span>
+                <span>95+ Lighthouse Scores</span>
+              </div>
             </motion.div>
           </motion.div>
 

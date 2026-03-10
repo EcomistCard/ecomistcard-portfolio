@@ -26,7 +26,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="glass rounded-2xl p-8 lg:p-10 border border-gray-200/60 dark:border-white/10 shadow-sm hover:shadow-md transition-shadow flex flex-col"
+              className="glass rounded-2xl p-8 lg:p-10 border border-gray-200/60 dark:border-white/10 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
             >
               {t.image && (
                 <div className="flex justify-center mb-5">
@@ -41,12 +41,16 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
               )}
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 flex-1">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 italic flex-1">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <div>
-                <p className="font-semibold text-gray-900 dark:text-white">{t.name}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{t.role}</p>
+              <div className="mt-4 pt-4 border-t border-gray-200/70 dark:border-white/10 flex flex-col items-start">
+                <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                  {t.name}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  {t.role}
+                </p>
               </div>
             </div>
           ))}

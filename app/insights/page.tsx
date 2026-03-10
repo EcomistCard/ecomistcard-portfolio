@@ -3,6 +3,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { insights } from "@/data/insights";
 import { ArrowRight, Calendar } from "lucide-react";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Insights",
@@ -12,14 +13,12 @@ export const metadata: Metadata = {
 
 export default function InsightsPage() {
   return (
-    <main className="min-h-screen pt-40 pb-24 bg-slate-50 dark:bg-transparent relative">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Insights</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-            Technical thinking on architecture, performance, and building scalable systems.
-          </p>
-        </div>
+    <main className="min-h-screen bg-slate-50 dark:bg-transparent relative">
+      <PageHero
+        title="Insights"
+        description="Technical thinking on architecture, performance, e-commerce, and building scalable systems. Click an article to read the full piece."
+      />
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
 
         <div className="grid md:grid-cols-2 gap-6">
           {insights.map((insight) => (

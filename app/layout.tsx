@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,7 +9,18 @@ import BackgroundVideo from "@/components/BackgroundVideo";
 import LiveChatBotLazy from "@/components/LiveChatBotLazy";
 import { site } from "@/lib/site";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-heading",
+  weight: ["500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -52,7 +63,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${plusJakarta.variable} font-sans`}>
         <ThemeProvider>
           <BackgroundVideo />
           <Navbar />

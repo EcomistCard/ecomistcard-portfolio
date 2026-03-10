@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import PageHero from "@/components/PageHero";
 import ContactContent from "@/components/sections/ContactContent";
 
 export const metadata: Metadata = {
@@ -10,8 +11,14 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen pt-40 pb-24 bg-slate-50 dark:bg-transparent">
-      <ContactContent />
-    </main>
+    <>
+      <PageHero
+        title="Contact"
+        description="Share a bit about your project, timeline, and goals. I’ll follow up with next steps and whether we’re a good fit to work together."
+      />
+      <main className="min-h-screen bg-slate-50 dark:bg-transparent pb-24">
+        <ContactContent />
+      </main>
+    </>
   );
 }

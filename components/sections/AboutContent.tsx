@@ -3,7 +3,8 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { Facebook, ArrowRight, Sparkles, Target, Heart } from "lucide-react";
+import { ArrowRight, Sparkles, Target, Heart } from "lucide-react";
+import Link from "next/link";
 import { site } from "@/lib/site";
 
 const container = {
@@ -41,8 +42,6 @@ export default function AboutContent() {
   const vision = "vision" in about ? (about as { vision?: string }).vision : undefined;
   const values =
     "values" in about ? (about as { values?: string[] }).values : undefined;
-  const facebookUrl =
-    (site.contact as { facebook?: string })?.facebook || "https://www.facebook.com";
 
   return (
     <section
@@ -162,7 +161,7 @@ export default function AboutContent() {
                 What I Value
               </h3>
             </div>
-            <ul className="flex flex-wrap gap-3 pl-[52px] sm:pl-0">
+            <ul className="grid grid-cols-2 gap-3 pl-[52px] sm:pl-0">
               {values.map((value, i) => (
                 <li
                   key={i}
@@ -175,24 +174,23 @@ export default function AboutContent() {
           </motion.article>
         )}
 
-        {/* CTA card: Learn more on Facebook */}
+        {/* Closing CTA card */}
         <motion.article
           variants={cardItem}
-          className="relative overflow-hidden rounded-2xl border-2 border-accent/30 dark:border-accent/40 bg-gradient-to-br from-accent/5 to-accent/10 dark:from-accent/10 dark:to-accent/5 p-6 sm:p-8 text-center"
+          className="relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-white/10 bg-white/95 dark:bg-slate-900/60 shadow-lg dark:shadow-none backdrop-blur-sm p-6 sm:p-8 text-center"
         >
-          <p className="text-gray-700 dark:text-gray-300 text-lg mb-6 max-w-xl mx-auto">
-            Want to see more of my day-to-day, projects, and thoughts? Connect with me on Facebook.
+          <p className="text-gray-700 dark:text-gray-300 text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
+            I&apos;m currently open to select consulting engagements and long-term partnerships. If
+            you&apos;re working on something that requires serious technical execution, I&apos;d love
+            to hear about it.
           </p>
-          <a
-            href={facebookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/work-with-me"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent hover:bg-accent-hover text-white font-semibold rounded-xl shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all duration-200"
           >
-            <Facebook className="w-5 h-5" />
-            Learn more about me on Facebook
+            Work With Me
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </motion.article>
       </motion.div>
     </section>

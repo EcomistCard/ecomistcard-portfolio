@@ -21,8 +21,12 @@ const config: Config = {
           hover: "#2563eb",
         },
       },
+      fontFamily: {
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["var(--font-heading)", "var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
       animation: {
-        "float": "float 6s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
       },
       keyframes: {
         float: {

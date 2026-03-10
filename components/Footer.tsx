@@ -1,25 +1,25 @@
 import Link from "next/link";
-import { Github, Twitter, Mail, Facebook } from "lucide-react";
+import { Github, Twitter, Mail } from "lucide-react";
 import { site } from "@/lib/site";
 
 const iconClass = "w-5 h-5 text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors";
-const contact = site.contact as { email?: string; github?: string; twitter?: string; facebook?: string };
+
+// Hard-coded, real social/contact destinations
 const socialLinks = [
-  { href: contact.github || "#", label: "GitHub", Icon: Github },
-  { href: contact.twitter || "#", label: "Twitter", Icon: Twitter },
-  { href: contact.email ? `mailto:${contact.email}` : "#", label: "Email", Icon: Mail },
-  { href: contact.facebook || "#", label: "Facebook", Icon: Facebook },
+  { href: "https://github.com/EcomistCard", label: "GitHub", Icon: Github },
+  { href: "https://x.com/cardly_martins", label: "Twitter (X)", Icon: Twitter },
+  { href: "mailto:Cardlymartins@gmail.com", label: "Email", Icon: Mail },
 ];
 
-const serviceSlugs = [
-  "digital-product-engineering",
-  "ecommerce-systems-architecture",
-  "shopify-infrastructure-optimization",
-  "performance-engineering",
-  "conversion-architecture",
-  "technical-auditing",
-  "system-refactoring",
-  "technical-advisory",
+const services = [
+  { slug: "digital-product-engineering", label: "Digital Product Engineering" },
+  { slug: "ecommerce-systems-architecture", label: "E-Commerce Systems Architecture" },
+  { slug: "shopify-infrastructure-optimization", label: "Shopify Infrastructure Optimization" },
+  { slug: "performance-engineering", label: "Performance Engineering" },
+  { slug: "conversion-architecture", label: "Conversion Architecture" },
+  { slug: "technical-auditing", label: "Technical Auditing" },
+  { slug: "system-refactoring", label: "System Refactoring" },
+  { slug: "technical-advisory", label: "Technical Advisory" },
 ];
 
 export default function Footer() {
@@ -83,13 +83,13 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-2">
-              {serviceSlugs.map((slug) => (
+              {services.map(({ slug, label }) => (
                 <li key={slug}>
                   <Link
                     href={`/services/${slug}`}
-                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white text-sm transition-colors capitalize"
+                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white text-sm transition-colors"
                   >
-                    {slug.replace(/-/g, " ")}
+                    {label}
                   </Link>
                 </li>
               ))}
